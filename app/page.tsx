@@ -49,7 +49,7 @@ export default function Chat() {
         </div>
       ) : (
         <ScrollArea
-          className='border rounded-lg p-4 sm:p-5 mb-2 h-[430px] sm:h-[450px]'
+          className='border rounded-lg p-4 sm:p-5 mb-2 h-[300px] sm:h-[400px]'
           ref={ref}>
           {error != null && (
             <div className='relative bg-red-500 text-white px-6 py-4 rounded-xl'>
