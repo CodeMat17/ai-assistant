@@ -15,6 +15,7 @@ const roleToColorMap: Record<Message["role"], string> = {
   assistant: "green",
   data: "orange",
   tool: "",
+  
 };
 
 export default function Chat() {
@@ -38,7 +39,7 @@ export default function Chat() {
   return (
     <div className='flex flex-col w-full max-w-xl px-4 py-12 mx-auto items-stretch '>
       <p
-        className={`text-center text-4xl md:text-5xl ${rubikGlitch.className} font-medium mb-8`}>
+        className={`text-center text-4xl md:text-5xl ${rubikGlitch.className} font-medium mb-4`}>
         AI Assistant
       </p>
 
@@ -65,7 +66,7 @@ export default function Chat() {
               className='whitespace-pre-wrap'
               style={{ color: roleToColorMap[m.role] }}>
               {m.role === "user" && (
-                <div className='flex font-semibold items-center gap-3 tracking-wider'>
+                <div className='mb-2 flex font-semibold items-center gap-3 tracking-wider'>
                   <div className='border rounded-full p-2 flex-shrink-0 bg-gray-100 shadow-md'>
                     <UserRound className='flex-shrink-0' />
                   </div>{" "}
@@ -73,7 +74,7 @@ export default function Chat() {
                 </div>
               )}
               {m.role === "assistant" && (
-                <div className='flex font-semibold items-center gap-3 tracking-wider'>
+                <div className='mb-2 flex font-semibold items-center gap-3 tracking-wider'>
                   <div className='border rounded-full p-2 flex-shrink-0 bg-green-100 shadow-md'>
                     <Bot className='flex-shrink-0' />
                   </div>{" "}
